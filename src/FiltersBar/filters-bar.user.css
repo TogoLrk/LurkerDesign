@@ -2,7 +2,7 @@
 @name LurkerDesign
 @namespace https://github.com/TogoLrk/LurkerDesign
 @homepageURL https://github.com/TogoLrk/LurkerDesign
-@version 0.0.5
+@version 0.0.6
 @updateURL https://github.com/TogoLrk/LurkerDesign/raw/master/src/FiltersBar/filters-bar.user.css
 @description More UX-friendly filters bar
 @author Togo (https://github.com/TogoLrk)
@@ -35,12 +35,6 @@
         filter: drop-shadow(0px 0px 0px white);
     }
 
-    /* Light theme */
-    /*body:not(.theme-legacy):not(.theme-dark) .btn-option > span > svg {*/
-    /*    -webkit-filter: drop-shadow(0px 0px 0px black);*/
-    /*    filter: drop-shadow(0px 0px 0px black);*/
-    /*}*/
-
     /* Slightly higher font size and weight */
     .btn-option {
         font-size: 0.8em !important;
@@ -71,15 +65,16 @@
         background-position: center;
     }
 
-    .btn-option[title="Widok pełny"] span:after {
+    /* White icons: View filter */
+    .btn-option[title="Widok pełny"] span:after, body:not(.theme-legacy):not(.theme-dark) .btn-option[title="Widok pełny"].active span:after {
         background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjRkZGRkZGIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiB2ZXJzaW9uPSIxLjEiIHN0eWxlPSJzaGFwZS1yZW5kZXJpbmc6Z2VvbWV0cmljUHJlY2lzaW9uO3RleHQtcmVuZGVyaW5nOmdlb21ldHJpY1ByZWNpc2lvbjtpbWFnZS1yZW5kZXJpbmc6b3B0aW1pemVRdWFsaXR5OyIgdmlld0JveD0iMCAwIDg0NyA4NDciIHg9IjBweCIgeT0iMHB4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4KICAgCiAgICAuZmlsMCB7ZmlsbDojRkZGRkZGfQogICAKICA8L3N0eWxlPjwvZGVmcz48Zz48cGF0aCBjbGFzcz0iZmlsMCIgZD0iTTE1NyA4NWw1MzIgMGM0MCwwIDczLDMzIDczLDczbDAgNTMyYzAsNDAgLTMzLDczIC03Myw3M2wtNTMyIDBjLTQwLDAgLTczLC0zMyAtNzMsLTczbDAgLTUzMmMwLC00MCAzMywtNzMgNzMsLTczeiI+PC9wYXRoPjwvZz48L3N2Zz4=");
     }
 
-    .btn-option[title="Widok zwinięty"] span:after {
+    .btn-option[title="Widok zwinięty"] span:after, body:not(.theme-legacy):not(.theme-dark) .btn-option[title="Widok zwinięty"].active span:after {
         background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjRkZGRkZGIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PGc+PHJlY3QgeD0iMTYuNSIgeT0iMzkuODMyNTIiIHdpZHRoPSI2NyIgaGVpZ2h0PSIyMC4zMzQ5NiI+PC9yZWN0PjxyZWN0IHg9IjE2LjUiIHk9IjE2LjUiIHdpZHRoPSI2NyIgaGVpZ2h0PSIyMC4zMzI1MiI+PC9yZWN0PjxyZWN0IHg9IjE2LjUiIHk9IjYzLjE2NzQ4IiB3aWR0aD0iNjciIGhlaWdodD0iMjAuMzMyNTIiPjwvcmVjdD48L2c+PC9nPjwvc3ZnPg==");
     }
 
-    .btn-option[title="Widok klasyczny"] span:after {
+    .btn-option[title="Widok klasyczny"] span:after, body:not(.theme-legacy):not(.theme-dark) .btn-option[title="Widok klasyczny"].active span:after {
         background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjRkZGRkZGIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpzZXJpZj0iaHR0cDovL3d3dy5zZXJpZi5jb20vIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHZlcnNpb249IjEuMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgc3R5bGU9IiIgeD0iMHB4IiB5PSIwcHgiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMiI+PHBhdGggZD0iTTIxLjA0NywxMy4zNjljMC4xMDMsMC4wNDIgMC4yMDcsMC4wODYgMC4yODUsMC4xNjRjMC4wNzgsMC4wNzkgMC4xMzUsMC4xNzcgMC4xNjQsMC4yODVjMC4wMTQsMC4wNTMgMC4wMTQsMC4xMDkgMC4wMjIsMC4xNjRsMCw1LjI1Yy0wLjAxNSwwLjExIC0wLjAzLDAuMjIyIC0wLjA4NSwwLjMxN2MtMC4wODQsMC4xNDYgLTAuMjI3LDAuMjU0IC0wLjM4NiwwLjI5NmMtMC4wNTMsMC4wMTUgLTAuMTA5LDAuMDE1IC0wLjE2NCwwLjAyMmwtMTcuNzY2LDBjLTAuMTEsLTAuMDE1IC0wLjIyMiwtMC4wMyAtMC4zMTcsLTAuMDg1Yy0wLjE0NSwtMC4wODQgLTAuMjUzLC0wLjIyNyAtMC4yOTYsLTAuMzg2Yy0wLjAxNCwtMC4wNTMgLTAuMDE0LC0wLjEwOSAtMC4wMjIsLTAuMTY0bDAsLTUuMjVjMC4wMDgsLTAuMDU1IDAuMDA4LC0wLjExMSAwLjAyMiwtMC4xNjRjMC4wNTgsLTAuMjE3IDAuMjM3LC0wLjM5MiAwLjQ0OSwtMC40NDljMC4wNTMsLTAuMDE0IDAuMTA5LC0wLjAxNCAwLjE2NCwtMC4wMjJsMTcuNzY2LDBjMC4wNTUsMC4wMDggMC4xMDksMC4wMTUgMC4xNjQsMC4wMjJabTAsLTkuMjE0YzAuMTAzLDAuMDQyIDAuMjA3LDAuMDg2IDAuMjg1LDAuMTY0YzAuMDc4LDAuMDc5IDAuMTM1LDAuMTc3IDAuMTY0LDAuMjg1YzAuMDE0LDAuMDUzIDAuMDE0LDAuMTA5IDAuMDIyLDAuMTY0bDAsNS4yNWMtMC4wMTUsMC4xMSAtMC4wMywwLjIyMiAtMC4wODUsMC4zMTdjLTAuMDg0LDAuMTQ2IC0wLjIyNywwLjI1MyAtMC4zODYsMC4yOTZjLTAuMDUzLDAuMDE0IC0wLjEwOSwwLjAxNCAtMC4xNjQsMC4wMjJsLTE3Ljc2NiwwYy0wLjA1NSwtMC4wMDggLTAuMTExLC0wLjAwOCAtMC4xNjQsLTAuMDIyYy0wLjIxNywtMC4wNTggLTAuMzkyLC0wLjIzNyAtMC40NDksLTAuNDQ5Yy0wLjAxNCwtMC4wNTMgLTAuMDE0LC0wLjEwOSAtMC4wMjIsLTAuMTY0bDAsLTUuMjVjMC4wMDgsLTAuMDU1IDAuMDA4LC0wLjExMSAwLjAyMiwtMC4xNjRjMC4wNTgsLTAuMjE3IDAuMjM3LC0wLjM5MyAwLjQ0OSwtMC40NDljMC4wNTMsLTAuMDE1IDAuMTA5LC0wLjAxNSAwLjE2NCwtMC4wMjJsMTcuNzY2LDBjMC4wNTUsMC4wMDcgMC4xMDksMC4wMTUgMC4xNjQsMC4wMjJaIj48L3BhdGg+PC9zdmc+");
     }
 
