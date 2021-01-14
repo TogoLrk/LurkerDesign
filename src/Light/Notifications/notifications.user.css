@@ -2,7 +2,7 @@
 @name LurkerDesign
 @namespace https://github.com/TogoLrk/LurkerDesign
 @homepageURL https://github.com/TogoLrk/LurkerDesign
-@version 0.0.2
+@version 0.0.3
 @updateURL https://github.com/TogoLrk/LurkerDesign/blob/master/src/Dark/Notifications/notifications.user.css
 @description If you are using custom tooltips from LurkerDesign, you might want to use this as well to fix some issues regarding notifications icons on the top bar.
 @author Togo (https://github.com/TogoLrk)
@@ -12,43 +12,88 @@
 ==/UserStyle== */
 
 @-moz-document domain("lurker.pl") {
-    @keyframes lurker-rotate {
+    @-webkit-keyframes lurker-rotate {
         0% {
+            -webkit-transform: rotate(0);
             transform: rotate(0);
         }
         4% {
+            -webkit-transform: rotate(8deg);
             transform: rotate(8deg);
         }
         8% {
+            -webkit-transform: rotate(-8deg);
             transform: rotate(-8deg);
         }
         12% {
+            -webkit-transform: rotate(8deg);
             transform: rotate(8deg);
         }
         16% {
+            -webkit-transform: rotate(-8deg);
             transform: rotate(-8deg);
         }
         20% {
+            -webkit-transform: rotate(0);
             transform: rotate(0);
         }
         100% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+        }
+    }
+
+    @keyframes lurker-rotate {
+        0% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+        }
+        4% {
+            -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+        }
+        8% {
+            -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+        }
+        12% {
+            -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+        }
+        16% {
+            -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+        }
+        20% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+        }
+        100% {
+            -webkit-transform: rotate(0);
             transform: rotate(0);
         }
     }
 
     a[title="Powiadomienia"].active span[uk-icon="bell"],
     a[title="Wiadomości"].active span[uk-icon="mail"] {
+        -webkit-animation: 1s lurker-rotate ease-in-out infinite;
         animation: 1s lurker-rotate ease-in-out infinite;
+        -webkit-transform-origin: 50% 0;
+        -ms-transform-origin: 50% 0;
         transform-origin: 50% 0;
     }
 
     a[title="Wiadomości"].active span[uk-icon="mail"] {
+        -webkit-animation: 1.5s lurker-rotate ease-in-out infinite;
         animation: 1.5s lurker-rotate ease-in-out infinite;
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
     }
 
     a[title="Powiadomienia"].active span[uk-icon="bell"] svg,
     a[title="Wiadomości"].active span[uk-icon="mail"] svg {
+        -webkit-filter: drop-shadow(0px 0px 2px #409eff) drop-shadow(0px 0px 1px #409eff);
         filter: drop-shadow(0px 0px 2px #409eff) drop-shadow(0px 0px 1px #409eff);
         color: #409eff;
     }

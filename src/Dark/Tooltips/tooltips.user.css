@@ -2,7 +2,7 @@
 @name LurkerDesign
 @namespace https://github.com/TogoLrk/LurkerDesign
 @homepageURL https://github.com/TogoLrk/LurkerDesign
-@version 0.0.2
+@version 0.0.3
 @updateURL https://github.com/TogoLrk/LurkerDesign/blob/master/src/Dark/Tooltips/tooltips.user.css
 @description Simple tooltips to give instant feedback about various buttons.
 @author Togo (https://github.com/TogoLrk)
@@ -23,11 +23,15 @@
     .btn-option:before {
         content: '';
         visibility: hidden;
+        -webkit-transition: opacity .15s;
+        -o-transition: opacity .15s;
         transition: opacity .15s;
         opacity: 0;
         position: absolute;
         bottom: 10px;
         left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
         transform: translateX(-50%);
         z-index: 99999;
     }
@@ -47,6 +51,7 @@
         border-radius: 5px;
         color: #fff;
         text-transform: none;
+        -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         white-space: nowrap;
     }
