@@ -2,7 +2,7 @@
 @name LurkerDesign - Tooltipy
 @namespace https://github.com/TogoLrk/LurkerDesign
 @homepageURL https://github.com/TogoLrk/LurkerDesign
-@version 0.0.4
+@version 0.0.5
 @updateURL https://github.com/TogoLrk/LurkerDesign/raw/master/src/Tooltips/tooltips.user.css
 @description Simple tooltips to give instant feedback about various buttons.
 @author Togo (https://github.com/TogoLrk)
@@ -10,17 +10,25 @@
 @license MIT
 
 ==/UserStyle== */
-
 @-moz-document domain("lurker.pl") {
+    .post-body ~ div > a > button,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(3),
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(4),
     .uk-navbar-nav > li > a,
     .btn-option {
         position: relative;
     }
 
+    .post-body ~ div > a > button:before,
+    .post-body ~ div > a > button:after,
     .uk-navbar-nav > li > a:after,
     .btn-option:after,
     .uk-navbar-nav > li > a:before,
-    .btn-option:before {
+    .btn-option:before,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(3):after,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(4):after,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(3):before,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(4):before {
         content: '';
         visibility: hidden;
         -webkit-transition: opacity .15s;
@@ -36,6 +44,9 @@
         z-index: 99999;
     }
 
+    .post-body ~ div > a > button:after,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(3):after,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(4):after,
     .uk-navbar-nav > li > a:after,
     .btn-option:after {
         content: attr(title) !important;
@@ -56,6 +67,9 @@
         white-space: nowrap;
     }
 
+    .post-body ~ div > a > button:before,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(3):before,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(4):before,
     .uk-navbar-nav > li > a:before,
     .btn-option:before {
         width: 0;
@@ -66,19 +80,52 @@
         line-height: 0px;
     }
 
+    .post-body ~ div > a > button:hover:after {
+        width: auto;
+        height: auto;
+        left: unset;
+        transform: translate(calc(-100% + 15px), 50%);
+        right: 0;
+    }
+
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(3):after {
+        content: 'Zapisz jako szkic' !important;
+    }
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(4):after {
+        content: 'Pomoc' !important;
+    }
+
     .uk-navbar-nav > li > a[title="Strona główna"]:before,
     .uk-navbar-nav > li > a[title="Strona główna"]:after {
         display: none;
     }
 
-    .btn-option:after {
+    .post-body ~ div > a > button:after {
+        bottom: -20px;
+    }
+
+    .post-body ~ div > a > button:before {
+        bottom: -7px;
+    }
+
+    .btn-option:after,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(3):hover:after,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(4):hover:after {
         bottom: -34px;
     }
 
-    .btn-option:before {
+    .btn-option:before,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(3):hover:before,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(4):hover:before {
         bottom: -8px;
     }
 
+    .post-body ~ div > a > button:hover:before,
+    .post-body ~ div > a > button:hover:after,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(3):hover:after,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(4):hover:after,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(3):hover:before,
+    #app > div > div > div > div > div > form > div:nth-child(5) > button:nth-child(4):hover:before,
     .uk-navbar-nav > li > a:hover:before,
     .uk-navbar-nav > li > a:hover:after,
     .btn-option:hover:after,

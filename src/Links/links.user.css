@@ -1,0 +1,67 @@
+/*==UserStyle==
+@name LurkerDesign - Linki
+@namespace https://github.com/TogoLrk/LurkerDesign
+@homepageURL https://github.com/TogoLrk/LurkerDesign
+@version 0.0.1
+@updateURL https://github.com/TogoLrk/LurkerDesign/raw/master/src/Links/links.user.css
+@description Less aggressive link containers
+@author Togo (https://github.com/TogoLrk)
+@supportURL https://github.com/TogoLrk/LurkerDesign/issues
+@license MIT
+
+==/UserStyle== */
+@-moz-document domain("lurker.pl") {
+    .post-body ~ div > a.tdn.card-link.uk-card.uk-card-default.uk-grid-collapse.uk-margin-medium-bottom.uk-margin-medium-top.uk-grid.uk-grid-stack {
+        max-height: 45px;
+        transition: max-height 0.35s ease-out;
+        transition-delay: 0s;
+        overflow: hidden;
+    }
+
+    .post-body ~ div > a.tdn.card-link.uk-card.uk-card-default.uk-grid-collapse.uk-margin-medium-bottom.uk-margin-medium-top.uk-grid.uk-grid-stack:hover {
+        max-height: 500px;
+        transition: max-height 0.35s ease-in;
+        transition-delay: 0s;
+    }
+
+    .post-body ~ div,
+    .post-body ~ div > a.tdn.card-link.uk-card.uk-card-default.uk-grid-collapse.uk-margin-medium-bottom.uk-margin-medium-top.uk-grid.uk-grid-stack {
+        margin: 5px 0 !important;
+    }
+
+    .post-body ~ div:last-child {
+        margin-bottom: 25px !important
+    }
+
+    .post-body ~ div > a h3.title {
+        padding-right: 20px;
+    }
+
+    .post-body ~ div > a > div {
+        padding: 10px 20px;
+    }
+
+    .post-body ~ div > a > button {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .post-body ~ div > a > button > span {
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-position: center;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjZmZmZmZmIiB4bWxuczp4PSJodHRwOi8vbnMuYWRvYmUuY29tL0V4dGVuc2liaWxpdHkvMS4wLyIgeG1sbnM6aT0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4bWxuczpncmFwaD0iaHR0cDovL25zLmFkb2JlLmNvbS9HcmFwaHMvMS4wLyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwMCAxMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3dpdGNoPjxmb3JlaWduT2JqZWN0IHJlcXVpcmVkRXh0ZW5zaW9ucz0iaHR0cDovL25zLmFkb2JlLmNvbS9BZG9iZUlsbHVzdHJhdG9yLzEwLjAvIiB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIj48L2ZvcmVpZ25PYmplY3Q+PGcgaTpleHRyYW5lb3VzPSJzZWxmIj48Zz48cGF0aCBkPSJNNTI3My4xLDI0MDAuMXYtMmMwLTIuOC01LTQtOS43LTRzLTkuNywxLjMtOS43LDR2MmMwLDEuOCwwLjcsMy42LDIsNC45bDUsNC45YzAuMywwLjMsMC40LDAuNiwwLjQsMXY2LjQgICAgIGMwLDAuNCwwLjIsMC43LDAuNiwwLjhsMi45LDAuOWMwLjUsMC4xLDEtMC4yLDEtMC44di03LjJjMC0wLjQsMC4yLTAuNywwLjQtMWw1LjEtNUM1MjcyLjQsMjQwMy43LDUyNzMuMSwyNDAxLjksNTI3My4xLDI0MDAuMXogICAgICBNNTI2My40LDI0MDBjLTQuOCwwLTcuNC0xLjMtNy41LTEuOHYwYzAuMS0wLjUsMi43LTEuOCw3LjUtMS44YzQuOCwwLDcuMywxLjMsNy41LDEuOEM1MjcwLjcsMjM5OC43LDUyNjguMiwyNDAwLDUyNjMuNCwyNDAweiI+PC9wYXRoPjxwYXRoIGQ9Ik01MjY4LjQsMjQxMC4zYy0wLjYsMC0xLDAuNC0xLDFjMCwwLjYsMC40LDEsMSwxaDQuM2MwLjYsMCwxLTAuNCwxLTFjMC0wLjYtMC40LTEtMS0xSDUyNjguNHoiPjwvcGF0aD48cGF0aCBkPSJNNTI3Mi43LDI0MTMuN2gtNC4zYy0wLjYsMC0xLDAuNC0xLDFjMCwwLjYsMC40LDEsMSwxaDQuM2MwLjYsMCwxLTAuNCwxLTFDNTI3My43LDI0MTQuMSw1MjczLjMsMjQxMy43LDUyNzIuNywyNDEzLjd6Ij48L3BhdGg+PHBhdGggZD0iTTUyNzIuNywyNDE3aC00LjNjLTAuNiwwLTEsMC40LTEsMWMwLDAuNiwwLjQsMSwxLDFoNC4zYzAuNiwwLDEtMC40LDEtMUM1MjczLjcsMjQxNy41LDUyNzMuMywyNDE3LDUyNzIuNywyNDE3eiI+PC9wYXRoPjwvZz48cGF0aCBkPSJNNzUuOCwzNy42di05LjNDNzUuOCwxNC4xLDY0LjIsMi41LDUwLDIuNVMyNC4yLDE0LjEsMjQuMiwyOC4zdjkuM2MtNywwLjYtMTIuNCw2LjQtMTIuNCwxMy42djMyLjYgICAgYzAsNy42LDYuMSwxMy43LDEzLjcsMTMuN2g0OS4xYzcuNiwwLDEzLjctNi4xLDEzLjctMTMuN1Y1MS4yQzg4LjMsNDQsODIuOCwzOC4yLDc1LjgsMzcuNnogTTU2LDc5LjRjMC4yLDEtMC41LDEuOS0xLjUsMS45aC05LjEgICAgYy0xLDAtMS43LTAuOS0xLjUtMS45bDMtMTEuOGMtMi41LTEuMS00LjMtMy42LTQuMy02LjZjMC00LDMuMy03LjMsNy4zLTcuM2M0LDAsNy4zLDMuMyw3LjMsNy4zYzAsMi45LTEuOCw1LjQtNC4zLDYuNkw1Niw3OS40eiAgICAgTTYyLjcsMzcuNUgzNy4zdi05LjFjMC03LDUuNy0xMi43LDEyLjctMTIuN3MxMi43LDUuNywxMi43LDEyLjdWMzcuNXoiPjwvcGF0aD48L2c+PC9zd2l0Y2g+PC9zdmc+);
+    }
+
+    .post-body ~ div > a > button > span > svg {
+        display: none;
+    }
+}
