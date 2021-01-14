@@ -2,7 +2,7 @@
 @name LurkerDesign - Linki
 @namespace https://github.com/TogoLrk/LurkerDesign
 @homepageURL https://github.com/TogoLrk/LurkerDesign
-@version 0.0.1
+@version 0.0.2
 @updateURL https://github.com/TogoLrk/LurkerDesign/raw/master/src/Links/links.user.css
 @description Less aggressive link containers
 @author Togo (https://github.com/TogoLrk)
@@ -11,21 +11,30 @@
 
 ==/UserStyle== */
 @-moz-document domain("lurker.pl") {
-    .post-body ~ div > a.tdn.card-link.uk-card.uk-card-default.uk-grid-collapse.uk-margin-medium-bottom.uk-margin-medium-top.uk-grid.uk-grid-stack {
+    .post-body ~ div > a.card-link {
         max-height: 45px;
         transition: max-height 0.35s ease-out;
         transition-delay: 0s;
         overflow: hidden;
     }
 
-    .post-body ~ div > a.tdn.card-link.uk-card.uk-card-default.uk-grid-collapse.uk-margin-medium-bottom.uk-margin-medium-top.uk-grid.uk-grid-stack:hover {
+    .post-body ~ div > a.card-link img {
+        opacity: 0;
+        transition: opacity .25s;
+    }
+
+    .post-body ~ div > a.card-link:hover img {
+        opacity: 1;
+    }
+
+    .post-body ~ div > a.card-link:hover {
         max-height: 500px;
         transition: max-height 0.35s ease-in;
         transition-delay: 0s;
     }
 
     .post-body ~ div,
-    .post-body ~ div > a.tdn.card-link.uk-card.uk-card-default.uk-grid-collapse.uk-margin-medium-bottom.uk-margin-medium-top.uk-grid.uk-grid-stack {
+    .post-body ~ div > a.card-link {
         margin: 5px 0 !important;
     }
 
@@ -44,6 +53,7 @@
     .post-body ~ div > a > button {
         width: 32px !important;
         height: 32px !important;
+        z-index: 2;
     }
 
     .post-body ~ div > a > button > span {
