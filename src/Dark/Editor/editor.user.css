@@ -2,16 +2,13 @@
 @name LurkerDesign
 @namespace https://github.com/TogoLrk/LurkerDesign
 @homepageURL https://github.com/TogoLrk/LurkerDesign
-@version 0.0.1
+@version 0.0.2
 @updateURL https://github.com/TogoLrk/LurkerDesign/src/Dark/Editor/editor.user.css
 @description More UX-friendly editor buttons
 @author Togo (https://github.com/TogoLrk)
 @supportURL https://github.com/TogoLrk/LurkerDesign/issues
 @license MIT
 
-@var color lurkerBlue "Primary color" #409eff
-@var color lurkerBlueSemiTransparent "50% alpha primary color" #409eff80
-@var color lurkerYellow "Notification color" #ffcf00
 ==/UserStyle== */
 
 @-moz-document domain("lurker.pl") {
