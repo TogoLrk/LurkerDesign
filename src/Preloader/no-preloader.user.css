@@ -2,7 +2,7 @@
 @name LurkerDesign - Preloader Off
 @namespace https://github.com/TogoLrk/LurkerDesign
 @homepageURL https://github.com/TogoLrk/LurkerDesign
-@version 0.0.1
+@version 0.0.2
 @updateURL https://github.com/TogoLrk/LurkerDesign/raw/master/src/Preloader/no-preloader.user.css
 @description Disabled loader
 @author Togo (https://github.com/TogoLrk)
@@ -11,7 +11,7 @@
 
 ==/UserStyle== */
 
-@-moz-document domain("lurker.pl") {
+@-moz-document domain("lurker.land") {
     #loader {
         display: none !important
     }

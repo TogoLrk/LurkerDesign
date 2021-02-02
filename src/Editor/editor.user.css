@@ -2,7 +2,7 @@
 @name LurkerDesign - Edytor
 @namespace https://github.com/TogoLrk/LurkerDesign
 @homepageURL https://github.com/TogoLrk/LurkerDesign
-@version 0.0.6
+@version 0.0.7
 @updateURL https://github.com/TogoLrk/LurkerDesign/raw/master/src/Editor/editor.user.css
 @description More UX-friendly editor buttons
 @author Togo (https://github.com/TogoLrk)
@@ -11,7 +11,7 @@
 
 ==/UserStyle== */
 
-@-moz-document domain("lurker.pl") {
+@-moz-document domain("lurker.land") {
     #app > div.uk-container-xlarge > div > div > div.uk-margin-auto.uk-margin-bottom > div > form > div.uk-margin.uk-margin-small-top > div > div > button > span > svg,
     #mainModal form > div:first-child > div > div > button svg {
         -webkit-transform: scale(1.6) translateY(-1px);

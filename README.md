@@ -1,6 +1,6 @@
 # LurkerDesign
 
-Custom CSS styles for [Lurker.pl](https://lurker.pl)
+Custom CSS styles for [lurker.land](https://lurker.land)
 
 What you will achieve by using these styles is the improved UI and UX.
 

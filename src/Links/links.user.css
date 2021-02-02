@@ -2,7 +2,7 @@
 @name LurkerDesign - Linki
 @namespace https://github.com/TogoLrk/LurkerDesign
 @homepageURL https://github.com/TogoLrk/LurkerDesign
-@version 0.0.2
+@version 0.0.3
 @updateURL https://github.com/TogoLrk/LurkerDesign/raw/master/src/Links/links.user.css
 @description Less aggressive link containers
 @author Togo (https://github.com/TogoLrk)
@@ -10,7 +10,7 @@
 @license MIT
 
 ==/UserStyle== */
-@-moz-document domain("lurker.pl") {
+@-moz-document domain("lurker.land") {
     .post-body ~ div > a.card-link {
         max-height: 45px;
         transition: max-height 0.35s ease-out;
