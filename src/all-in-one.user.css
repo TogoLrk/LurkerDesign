@@ -2,7 +2,7 @@
 @name LurkerDesign
 @namespace https://github.com/TogoLrk/LurkerDesign
 @homepageURL https://github.com/TogoLrk/LurkerDesign
-@version 0.1.2
+@version 0.1.3
 @updateURL https://github.com/TogoLrk/LurkerDesign/raw/master/src/all-in-one.user.css
 @description All styles merged together
 @author Togo (https://github.com/TogoLrk)
@@ -471,6 +471,11 @@
 
     .uk-pagination li a:not(.uk-active):hover {
         color: #1e87f0;
-        border-color: #1e87f0;
+        border-color: #1e87f0 !important;
+    }
+
+    body:not(.theme-legacy):not(.theme-dark) .uk-pagination li a:not(.uk-active) {
+        color: #000;
+        border-color: #dae0e6;
     }
 }

@@ -2,7 +2,7 @@
 @name LurkerDesign - Pagination
 @namespace https://github.com/TogoLrk/LurkerDesign
 @homepageURL https://github.com/TogoLrk/LurkerDesign
-@version 0.0.1
+@version 0.0.2
 @updateURL https://github.com/TogoLrk/LurkerDesign/raw/master/src/Pagination/pagination.user.css
 @description Changing pagination nav
 @author Togo (https://github.com/TogoLrk)
@@ -40,6 +40,11 @@
 
     .uk-pagination li a:not(.uk-active):hover {
         color: #1e87f0;
-        border-color: #1e87f0;
+        border-color: #1e87f0 !important;
+    }
+
+    body:not(.theme-legacy):not(.theme-dark) .uk-pagination li a:not(.uk-active) {
+        color: #000;
+        border-color: #dae0e6;
     }
 }
