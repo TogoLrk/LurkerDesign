@@ -1,0 +1,45 @@
+/*==UserStyle==
+@name LurkerDesign - Pagination
+@namespace https://github.com/TogoLrk/LurkerDesign
+@homepageURL https://github.com/TogoLrk/LurkerDesign
+@version 0.0.1
+@updateURL https://github.com/TogoLrk/LurkerDesign/raw/master/src/Pagination/pagination.user.css
+@description Changing pagination nav
+@author Togo (https://github.com/TogoLrk)
+@supportURL https://github.com/TogoLrk/LurkerDesign/issues
+@license MIT
+
+==/UserStyle== */
+
+@-moz-document domain("lurker.land") {
+    .uk-pagination li {
+        padding: 0;
+        margin-left: 5px;
+    }
+
+    .uk-pagination li:first-child {
+        margin-left: 0
+    }
+
+    .uk-pagination li a {
+        padding: 0px 7px;
+        text-align: center;
+        min-width: 15px;
+        transition: color .1s ease-in-out, border-color .1s ease-in-out;
+    }
+
+    .uk-pagination li a:not(.uk-disabled) {
+        border: 1px solid #e0e0e029;
+        box-shadow: rgba(107, 152, 192, .07) 3px 3px 6px 0px inset, rgba(255, 255, 255, .06) -3px -3px 6px 1px inset;
+    }
+
+    .uk-pagination li a.uk-active {
+        background-color: #1e87f0;
+        color: #fff !important;
+    }
+
+    .uk-pagination li a:not(.uk-active):hover {
+        color: #1e87f0;
+        border-color: #1e87f0;
+    }
+}
